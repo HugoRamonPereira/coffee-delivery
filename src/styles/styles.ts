@@ -15,10 +15,6 @@ import {
   RobotoBoldWoff2
 } from '../assets/fonts';
 
-import margins from './margins';
-import paddings from './paddings';
-import text from './text';
-
 export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'BalooBold';
@@ -64,19 +60,32 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
   }
 
   html, body {
     height: 100%;
+    background: ${(props) => props.theme.colors.base.baseground};
+    color: ${(props) => props.theme.colors.base.baseText};
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, textarea, button {
+    font-family: ${(props) => props.theme.families.regular};
+    font-weight: 400;
   }
 
   button {
     cursor: pointer;
   }
 
-  ${margins}
-  ${paddings}
-  ${text}
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
+  input[type='number'] {
+    appearance: none;
+    -moz-appearance: textfield;
+  }
 `;

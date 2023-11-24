@@ -17,12 +17,17 @@ export const CoffeeImageContainer = styled.div`
 `;
 
 export const BadgeContainer = styled.div`
+  width: fit-content;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  gap: 6px;
 `;
 
 export const CoffeeBadge = styled.span`
   font-family: 'RobotoBold';
-  font-size: ${(props) => props.theme.font.sizes.tiny};
+  font-size: ${(props) => props.theme.font.tag};
   text-transform: uppercase;
   padding: 6px 12px;
   border-radius: 2rem;
@@ -50,24 +55,31 @@ export const CoffeeInfoCard = styled.div`
     font-family: 'RobotoRegular';
     text-align: center;
     color: ${(props) => props.theme.colors.base.baseLabel};
-    font-size: ${(props) => props.theme.font.sizes.small};
+    font-size: ${(props) => props.theme.font.textRegularS};
   }
 `;
 
 export const CoffeeActionsContainer = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
+  justify-content: space-evenly;
+  margin-top: 1.5rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
 
   p {
     font-family: 'RobotoRegular';
-    font-size: ${(props) => props.theme.font.sizes.xsmall};
+    font-size: ${(props) => props.theme.font.textRegularS};
     color: ${(props) => props.theme.colors.base.baseText};
 
     span {
       font-family: 'BalooBold';
-      font-size: ${(props) => props.theme.font.sizes.medium};
+      font-size: ${(props) => props.theme.font.textRegularL};
     }
   }
 `;

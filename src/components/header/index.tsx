@@ -1,25 +1,24 @@
 import Logo from '../../assets/logo.svg';
-import LocationPin from '../../assets/icons/location-pin.svg';
-import Cart from '../../assets/icons/cart.svg';
-
+import { MapPin, ShoppingCart } from 'phosphor-react';
 import * as S from './styles';
-import { CartButton } from '../buttons/cart-button/styles';
 
 export function Header() {
   return (
     <S.AppHeader>
-      <div>
-        <img src={Logo} alt='coffee logo' />
-      </div>
-      <S.HeaderActions>
-        <S.LocationButton>
-          <img src={LocationPin} alt='Location pin' />
-          Porto Alegre, RS
-        </S.LocationButton>
-        <CartButton>
-          <img src={Cart} alt='cart icon' />
-        </CartButton>
-      </S.HeaderActions>
+      <S.InnerHeader className='contentContainer'>
+        <div>
+          <img src={Logo} alt='coffee logo' />
+        </div>
+        <S.HeaderActions>
+          <S.ActionButton variant='purple'>
+            <MapPin size={20} weight='fill' />
+            Porto Alegre, RS
+          </S.ActionButton>
+          <S.ActionButton variant='yellow'>
+            <ShoppingCart size={20} weight='fill' />
+          </S.ActionButton>
+        </S.HeaderActions>
+      </S.InnerHeader>
     </S.AppHeader>
   );
 }

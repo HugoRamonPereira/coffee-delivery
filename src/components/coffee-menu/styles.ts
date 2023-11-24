@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 export const CoffeeCardContainer = styled.div`
-  width: 100%;
-  max-width: 1120px;
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 5rem;
 `;
 
 export const Title = styled.div`
@@ -21,4 +19,12 @@ export const CoffeeList = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 2rem;
+
+  /* width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  row-gap: 2.5rem;
+  margin-top: 3rem; */
 `;

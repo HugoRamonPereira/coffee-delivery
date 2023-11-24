@@ -1,35 +1,54 @@
 import * as S from './styles';
-import Cart from '../../assets/icons/cart.svg';
 import { ButtonGroup } from '../buttons/button-group';
-import ExpressoTradicional from '../../assets/images/coffee-list/expresso-tradicional.svg';
-import { CartButton } from '../buttons/cart-button';
+import { AddToCartContainer } from '../buttons/button-group/styles';
+import { ShoppingCart } from 'phosphor-react';
+import { formatCurrency } from '../../utils/formatCurrency';
 
-export function CoffeeCard() {
+interface CoffeeProps {
+  coffee: Coffee;
+}
+
+export interface Coffee {
+  id: number;
+  title: string;
+  description: string;
+  type: string[];
+  price: number;
+  image: string;
+}
+
+export function CoffeeCard({ coffee }: CoffeeProps) {
+  const formattedValue = formatCurrency(coffee.price);
+
   return (
     <S.Container>
       <S.CoffeeImageContainer>
-        <img src={ExpressoTradicional} alt='' />
+        <img src={`/coffee-list/${coffee.image}`} alt='' />
       </S.CoffeeImageContainer>
       <S.BadgeContainer>
-        <S.CoffeeBadge>Tradicional</S.CoffeeBadge>
+        {coffee.type.map((badge) => (
+          <S.CoffeeBadge key={`${coffee.id}${badge}`}>{badge}</S.CoffeeBadge>
+        ))}
       </S.BadgeContainer>
 
       <S.CoffeeInfoCard>
-        <h3>Café com Leite</h3>
-        <p>O tradicional café feito com água quente e grãos moídos</p>
+        <h3>{coffee.title}</h3>
+        <p>{coffee.description}</p>
       </S.CoffeeInfoCard>
 
       <S.CoffeeActionsContainer>
-        <p>
-          R$ <span>9,90</span>
-        </p>
-
         <div>
-          <ButtonGroup />
-          <CartButton>
-            <img src={Cart} alt='cart icon' />
-          </CartButton>
+          <p>
+            R$ <span>{formattedValue}</span>
+          </p>
         </div>
+
+        <AddToCartContainer>
+          <ButtonGroup />
+          <button>
+            <ShoppingCart weight='fill' size={22} />
+          </button>
+        </AddToCartContainer>
       </S.CoffeeActionsContainer>
     </S.Container>
   );
