@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from '../pages/home';
-import { CompleteOrder } from '../pages/complete-order';
+import { CompleteOrder } from '../pages/checkout/components/complete-order';
 import { Checkout } from '../pages/checkout';
 import { MainLayout } from '../layout/default';
 

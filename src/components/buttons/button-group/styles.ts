@@ -48,10 +48,6 @@ export const MinusButton = styled.button`
   padding: 10px 8px;
 `;
 
-// export const InputValue = styled.input`
-//   padding: 8px;
-// `;
-
 export const PlusButton = styled.button`
   border: none;
   padding: 10px 8px;

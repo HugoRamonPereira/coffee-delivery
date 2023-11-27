@@ -39,7 +39,7 @@ export default {
       baseButton: '#E6E5E5',
       baseInput: '#EDEDED',
       baseCard: '#F3F2F2',
-      baseground: '#FAFAFA',
+      baseGround: '#FAFAFA',
       white: '#FFFFFF'
     }
   }
