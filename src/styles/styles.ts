@@ -64,7 +64,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html, body {
     height: 100%;
-    background: ${(props) => props.theme.colors.base.baseground};
+    background: ${(props) => props.theme.colors.base.baseGround};
     color: ${(props) => props.theme.colors.base.baseText};
     -webkit-font-smoothing: antialiased;
   }

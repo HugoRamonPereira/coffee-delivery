@@ -4,10 +4,11 @@ export const PerksWithIconContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  font-family: 'RobotoRegular';
 `;
 
 interface PerksContainerProps {
-  iconBg: string;
+  iconbg: string;
 }
 
 export const PerksContainer = styled.div<PerksContainerProps>`
@@ -15,7 +16,7 @@ export const PerksContainer = styled.div<PerksContainerProps>`
   height: 2rem;
   border-radius: 50%;
 
-  background: ${({ iconBg }) => iconBg};
+  background: ${({ iconbg }) => iconbg};
   color: ${(props) => props.theme.colors.base.white};
   display: flex;
   align-items: center;

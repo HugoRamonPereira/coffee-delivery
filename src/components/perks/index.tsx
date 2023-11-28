@@ -10,7 +10,7 @@ interface PerksProps {
 export function Perks({ icon, text, iconBackground }: PerksProps) {
   return (
     <S.PerksWithIconContainer>
-      <S.PerksContainer iconBg={iconBackground}>{icon}</S.PerksContainer>
+      <S.PerksContainer iconbg={iconBackground}>{icon}</S.PerksContainer>
       {typeof text === 'string' ? <p>{text}</p> : text}
     </S.PerksWithIconContainer>
   );

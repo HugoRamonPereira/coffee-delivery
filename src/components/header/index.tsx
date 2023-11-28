@@ -2,8 +2,11 @@ import Logo from '../../assets/logo.svg';
 import { MapPin, ShoppingCart } from 'phosphor-react';
 import * as S from './styles';
 import { NavLink } from 'react-router-dom';
+import { useCart } from '../../hooks/useCart';
 
 export function Header() {
+  const { cartQuantityBadge } = useCart();
+
   return (
     <S.AppHeader>
       <S.InnerHeader className='contentContainer'>
@@ -19,6 +22,9 @@ export function Header() {
           </S.ActionButton>
           <NavLink to='/checkout'>
             <S.ActionButton variant='yellow'>
+              {cartQuantityBadge >= 1 && (
+                <S.QuantityBadge>{cartQuantityBadge}</S.QuantityBadge>
+              )}
               <ShoppingCart size={20} weight='fill' />
             </S.ActionButton>
           </NavLink>
