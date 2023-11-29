@@ -12,7 +12,8 @@ export const PaymentInputContainer = styled.div`
   gap: 0.75rem;
   font-size: 0.75rem;
   border-radius: 6px;
-  height: 3rem;
+  width: 11rem;
+  height: 3.1875rem;
   border: 1px solid ${({ theme }) => theme.colors.base.baseButton};
   transition: 0.3s;
   user-select: none;

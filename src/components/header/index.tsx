@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { useCart } from '../../hooks/useCart';
 
 export function Header() {
-  const { cartQuantityBadge } = useCart();
+  const { cartAmmount } = useCart();
 
   return (
     <S.AppHeader>
@@ -22,8 +22,8 @@ export function Header() {
           </S.ActionButton>
           <NavLink to='/checkout'>
             <S.ActionButton variant='yellow'>
-              {cartQuantityBadge >= 1 && (
-                <S.QuantityBadge>{cartQuantityBadge}</S.QuantityBadge>
+              {cartAmmount >= 1 && (
+                <S.QuantityBadge>{cartAmmount}</S.QuantityBadge>
               )}
               <ShoppingCart size={20} weight='fill' />
             </S.ActionButton>
