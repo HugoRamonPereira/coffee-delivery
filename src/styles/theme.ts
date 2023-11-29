@@ -40,7 +40,8 @@ export default {
       baseInput: '#EDEDED',
       baseCard: '#F3F2F2',
       baseGround: '#FAFAFA',
-      white: '#FFFFFF'
+      white: '#FFFFFF',
+      error: '#FF0033'
     }
   }
 } as const;

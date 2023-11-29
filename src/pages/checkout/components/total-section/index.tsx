@@ -26,7 +26,7 @@ export function TotalSection() {
         <p>Total</p>
         <p>R$ {formattedTotalCartSum}</p>
       </S.TotalSum>
-      <Button disabled={cartAmmount <= 0} />
+      <Button disabled={cartAmmount <= 0} type='submit' />
     </S.TotalSectionContainer>
   );
 }
