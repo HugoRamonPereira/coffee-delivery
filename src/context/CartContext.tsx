@@ -16,6 +16,7 @@ interface CartContextProps {
     action: 'add' | 'subtract'
   ) => void;
   deleteCoffeeFromCart: (coffeeId: number) => void;
+  emptyCart: () => void;
 }
 
 interface CartContextProviderProps extends PropsWithChildren {}
@@ -92,6 +93,10 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     setCartItems(newCart);
   }
 
+  function emptyCart() {
+    setCartItems([]);
+  }
+
   useEffect(() => {
     localStorage.setItem(
       COFFEE_ORDER_LOCALSTORAGE_KEY,
@@ -107,7 +112,8 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         cartItemsTotal,
         addCoffeeToCart,
         changeSelectedCoffeesQuantity,
-        deleteCoffeeFromCart
+        deleteCoffeeFromCart,
+        emptyCart
       }}
     >
       {children}

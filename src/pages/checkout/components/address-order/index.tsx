@@ -19,7 +19,8 @@ export function AddressOrder() {
       <Input
         placeholder='CEP'
         className='cep'
-        type='number'
+        type='string'
+        maxLength={9}
         {...register('cep')}
         error={errors.cep?.message}
       />
