@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+## Ignite Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<center><h3>Página inicial</h3></center>
 
-Currently, two official plugins are available:
+<img src='./src/assets/images/readme-images/main.png' />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<center><h3>Lista de Cafés</h3></center>
 
-## Expanding the ESLint configuration
+<img src='./src/assets/images/readme-images/coffee-list.png' />
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<center><h3>Formulário de Entrega e cálculo do valor total</h3></center>
 
-- Configure the top-level `parserOptions` property like this:
+<img src='./src/assets/images/readme-images/address-form.png' />
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+<center><h3>Validação do Formulário</h3></center>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<img src='./src/assets/images/readme-images/validation-errors.png' />
+
+<center><h3>Página de Pedido Completo</h3></center>
+
+<img src='./src/assets/images/readme-images/complete-order.png' />
+
+<br/>
+
+### Tecnologias usadas
+
+O projeto foi desenvolvido usando [React.js](https://react.dev/) e [Vite](https://vitejs.dev/)
+junto com [Styled-Components](https://styled-components.com/) para estilizar a aplicação.
+Na parte dos formulários foi usado o [React-Hook-Form](https://react-hook-form.com/) e o [Zod](https://zod.dev/) para validação dos schemas.
+
+### License
+
+© Feito com muito &#10084; por Hugo Ramon Pereira -> [Portfolio](https://hugoramonpereira.dev/) -> [LinkedIn](https://www.linkedin.com/in/hugo-ramon-pereira/) 🇧🇷 durante o desafio do curso da [Rocketseat](https://www.rocketseat.com.br/)
